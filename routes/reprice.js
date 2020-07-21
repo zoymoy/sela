@@ -1,6 +1,6 @@
 const os = require("os");
 const fs = require("fs");
-const myCache = require("./mcache.js");
+const myCache = require("../utils/mcache.js");
 
 exports.list = function(req, res){
     res.statusCode = 202;
@@ -19,8 +19,8 @@ exports.list = function(req, res){
 
     function createFile() {
         let fileName = timestamp + '_' + fileSuffix + '.log';
-        // let folder = '/Users/yoav/Downloads/sela/';
-        let folder = '/tmp/repricer/results/';
+        let folder = '/Users/yoav/Downloads/sela/';
+        // let folder = '/tmp/repricer/results/';
         let path = folder + fileName;
 
         if (fs.existsSync(path)) {

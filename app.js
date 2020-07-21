@@ -10,8 +10,8 @@ const rawBodySaver = function (req, res, buf, encoding) {
 app.use(bodyParser.json({verify: rawBodySaver}));
 app.use(bodyParser.raw({verify: rawBodySaver, type: '*/*'}));
 
-const reprice = require('./reprice');
-const product = require('./product');
+const reprice = require('./routes/reprice');
+const product = require('./routes/product');
 
 module.exports = app;
 

@@ -1,4 +1,4 @@
-const myCache = require("./mcache.js");
+const myCache = require("../utils/mcache.js");
 
 exports.get = function(req, res){
     // Store the product file ??
